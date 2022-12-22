@@ -1,11 +1,11 @@
 body {
     background-color: #181818;
 }
-.BOStext, .BOResetText, .BlueWinText, .OrangeWinText {
+.BOStext, .BOResetText, .BlueWinText, .OrangeWinText, .blueteamname, .orangeteamname {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
-    font-weight:600;
+    font-weight:700;
 }
 .BestOfSeries, .BlueWins, .OrangeWins {
     padding-bottom: 20px;
@@ -13,7 +13,7 @@ body {
 
 
 /* CSS */
-.buttonbw1, .buttonbw2, .buttonbw3, .buttonbw4, .buttonow1, .buttonow2, .buttonow3, .buttonow4, .buttonnobestof, .buttonbestof3, .buttonbestof5, .buttonbestof7, .buttonreset {
+.buttonbw1, .buttonbw2, .buttonbw3, .buttonbw4, .buttonow1, .buttonow2, .buttonow3, .buttonow4, .buttonnobestof, .buttonbestof3, .buttonbestof5, .buttonbestof7, .buttonreset, .blueteamnamesubmit, .orangeteamnamesubmit, .bluecoloursubmit, .orangecoloursubmit, .bluecoloursubmitclear, .orangecoloursubmitclear, .uselogo, .TournamentTextSubmit {
   appearance: button;
   backface-visibility: hidden;
   background-color: #ffffff;
@@ -24,7 +24,7 @@ body {
   color: rgb(0, 0, 0);
   cursor: pointer;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
+  font-size: 84%;
   font-weight:600;
   height: 44px;
   line-height: 1.15;
@@ -40,6 +40,10 @@ body {
   touch-action: manipulation;
   width: 115px;
   height: 35px;
+  white-space: nowrap;
+}
+.blueteamnamesubmit, .orangeteamnamesubmit, .bluecoloursubmit, .orangecoloursubmit, .uselogo, .TournamentTextSubmit {
+    background-color: red;
 }
 .buttonreset:hover {
     background-color: rgb(0, 255, 255);
