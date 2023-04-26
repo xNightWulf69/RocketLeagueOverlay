@@ -1,0 +1,1084 @@
+@font-face {
+	font-family: Roboto-Bold;
+	src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2);
+}
+@font-face {
+	font-family: 'MyWebFont';
+	src: url('./fonts/Nerd.ttf');
+  }
+body {
+	font-family: Roboto-Bold;
+	background-color: black;
+	margin: 0px;
+}
+.timer {
+	position: absolute;
+	left: 857px;
+	height: 95px;
+	width: 190px;
+	color: #FFFFFF;
+	top: 18px;
+	text-align: center;
+	font-size: 40px;
+	padding-top: 10px;
+	text-shadow: 4px 4px 5px #939393;
+	background-color: transparent;
+	z-index: 21;
+}
+.scoreboard {
+	position: absolute;
+	background-size: cover;
+	width: 1056px;
+	height: 104px;
+	left: 425px;
+	fill: rgb(30,30,30);
+	z-index: 21;
+	visibility: hidden;
+}
+.scoreboardoverlayleft, .scoreboardoverlayright {
+	position: absolute;
+	width: 528px;
+	height: 104px;
+	z-index: 22;
+	visibility: hidden;
+}
+.scoreboardoverlayleft {
+	left: 425px;
+	fill: rgb(0, 195, 255);
+	stroke: none;
+}
+.scoreboardoverlayright {
+	left: 953px;
+	fill: orange;
+	stroke: none;
+}
+.bluename, .orangename {
+	position: absolute;
+	font-size: 25px;
+	text-align: center;
+	height: 30px;
+	width: 350px;
+	top: 50px;
+	z-index: 21;
+	white-space: nowrap;
+	overflow: hidden;
+	text-transform: uppercase;
+	line-height: 30px;
+	font-weight: 700;
+	
+}
+.bluename {
+	color: white;
+	left: 450px;
+}
+.orangename {
+	color: white;
+	left: 1130px;
+}
+.LeftScore {
+    position: absolute;
+	height: 65px;
+	width: 459.5px;
+	left: 426px;
+	top: 17px;
+	z-index: 22;
+	visibility: hidden;
+}
+.LeftScoreBOS {
+    position: absolute;
+	height: 122px;
+	width: 528px;
+	left: 425px;
+	top: 0px;
+	z-index: 21;
+	visibility: hidden;
+}
+.RightScore {
+    position: absolute;
+	height: 65px;
+	width: 459.5px;
+	left: 1020px;
+	top: 17px;
+	z-index: 22;
+	visibility: hidden;
+}
+.RightScoreBOS {
+    position: absolute;
+	height: 122px;
+	width: 528px;
+	left: 953px;
+	top: 0px;
+	z-index: 21;
+	visibility: hidden;
+}
+.bluescorenumber, .orangescorenumber {
+	position: absolute;
+	color: #FFFFFF;
+	font-size: 40px;
+	text-align: center;
+	width: 70px;
+	z-index: 23;
+	top: 27px;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+}
+.bluescorenumber {
+	left: 805px;
+}
+.orangescorenumber {
+	left: 1030px;
+}
+.overtime {
+	position: absolute;
+	background: rgba(30,30,30, 0.95);
+	width: 155px;
+	height: 20px;
+	left: 870px;
+	top: 77.6px;
+	border-bottom: 5px solid blue;
+	border-left: 5px solid blue;
+	border-right: 5px solid orange;
+	border-radius: 0px 0px 5px 5px;
+	background-image: linear-gradient(0.25turn, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+	border-image-slice: 2 !important;
+	background-origin: border-box;
+	background-clip: padding-box;
+	z-index: 21;
+}
+.overtimetext {
+	position: absolute;
+	color: white !important;
+	font-size: 20px;
+	text-align: center;
+	top: 75px;
+	left: 904px;
+	z-index: 21;
+	visibility: hidden;
+}
+.overtimeunderline {
+	position: absolute;
+	background: linear-gradient(0.25turn, rgb(255, 0, 0), rgb(55, 0, 253));
+	width: 156px;
+	height: 4px;
+	left: 874px;
+	top: 74px;
+	z-index: 21;
+}
+.blueplayer1, .blueplayer2, .blueplayer3, .blueplayer4 {
+	position: absolute;
+	height: 86px;
+	width: 280px;
+	left: 5px;
+	visibility: hidden;
+}
+.blueplayer1 {
+	top: 970px;
+}
+.blueplayer2 {
+	top: 870px;
+}
+.blueplayer3 {
+	top: 770px;
+}
+.blueplayer4 {
+	top: 670px;
+}
+.orangeplayer1, .orangeplayer2, .orangeplayer3, .orangeplayer4 {
+	position: absolute;
+	height: 86px;
+	width: 280px;
+	left: 1635px;
+	visibility: hidden;
+}
+.orangeplayer1 {
+	top: 970px;
+}
+.orangeplayer2 {
+	top: 870px;
+}
+.orangeplayer3 {
+	top: 770px;
+}
+.orangeplayer4 {
+	top: 670px;
+}
+.bluep1stats, .bluep2stats, .bluep3stats, .bluep4stats {
+	position: absolute;
+	height: 83px;
+	width: 310px;
+	left: 5px;
+	visibility: hidden;
+}
+.bluep1stats {
+	top: 970px;
+}
+.bluep2stats {
+	top: 870px;
+}
+.bluep3stats {
+	top: 770px;
+}
+.bluep4stats {
+	top: 670px;
+}
+.bluep1name, .bluep2name, .bluep3name, .bluep4name {
+	position: absolute;
+	color: white;
+	font-size: 20px;
+	left: 7px;
+	top: 5px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.bluep1goal, .bluep1assist, .bluep1save, .bluep1shot, .bluep2goal, .bluep2assist, .bluep2save, .bluep2shot, .bluep3goal, .bluep3assist, .bluep3save, .bluep3shot, .bluep4goal, .bluep4assist, .bluep4save, .bluep4shot {
+	width: 25px;
+	height: 25px;
+	padding-left: 22px;
+}
+.bluep1table, .bluep2table, .bluep3table, .bluep4table {
+	position: absolute;
+	top: 55px;
+	color: white;
+	height: 25px;
+	fill: white;
+	font-size: 20px;
+	left:-12px;
+}
+.orangep1stats, .orangep2stats, .orangep3stats, .orangep4stats {
+	position: absolute;
+	height: 83px;
+	width: 310px;
+	left: 1675px;
+	visibility: hidden;
+}
+.orangep1stats {
+	top: 970px;
+}
+.orangep2stats {
+	top: 870px;
+}
+.orangep3stats {
+	top: 770px;
+}
+.orangep4stats {
+	top: 670px;
+}
+.orangep1name, .orangep2name, .orangep3name, .orangep4name {
+	color: white;
+	font-size: 20px;
+	left: -500px;
+	top: 7px;
+	text-align: right;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.orangep1namecontainer, .orangep2namecontainer, .orangep3namecontainer, .orangep4namecontainer {
+	position: absolute;
+	width: 290px;
+	left: -55px;
+	top: 3px;
+}
+.orangep1goal, .orangep1assist, .orangep1save, .orangep1shot, .orangep2goal, .orangep2assist, .orangep2save, .orangep2shot, .orangep3goal, .orangep3assist, .orangep3save, .orangep3shot, .orangep4goal, .orangep4assist, .orangep4save, .orangep4shot {
+	width: 25px;
+	height: 25px;
+	padding-left: 22px;
+}
+.orangep1table, .orangep2table, .orangep3table, .orangep4table {
+	position: absolute;
+	top: 55px;
+	left: -45px;
+	color: white;
+	fill: white;
+	height: 25px;
+	font-size: 20px;
+	text-align: right;
+}
+.activeplayer {
+	position: absolute;
+	width: 577px;
+	height: 115px;
+	top: 945px;
+	left: 690px;
+	border: 4px solid blue;
+	border-radius: 22px;
+	visibility: hidden;
+}
+.orangeactivestats{
+	position: absolute;
+	width: 577px;
+	height: 200px;
+	left: 690px;
+	top: 1012px;
+	visibility: hidden;
+}
+.orangeactivetable {
+	color: white;
+	font-size: 20px;
+	height: 25px;
+}
+.orangeactivegoal, .orangeactiveassist, .orangeactivesave, .orangeactiveshot, .orangeactivedemo {
+	fill:white;
+	height: 40px;
+	width: 40px;
+	padding-left: 45px;
+	font-size: 30px;
+}
+.orangeactivespeed, .blueactivespeed {
+	fill: white;
+	stroke: white;
+	height: 30px;
+	width: 30px;
+	padding-left: 24px;
+	font-size: 30px;
+	position: absolute;
+	left: 434px;
+	top: -60px;
+}
+.orangeactivename {
+	font-size: 30px;
+	color: white;
+	top: -61px;
+	left: 14px;
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.orangeactiveboostcontainer {
+	position: absolute;
+	width: 577px;
+	height: 22px;
+	background-color: rgba(255, 255, 255, 0.5);
+	top: -27px;
+	left: 4px;
+}
+.orangeactiveboost {
+	width: 577px;
+	height: 22px;
+	background: linear-gradient(0.25turn, #ffa600, #ffa600);
+	transition: 0.2s;
+	transition-timing-function: ease;
+}
+.orangeactiveboostnumber {
+	height: 30px;
+	width: 30px;
+	color: white;
+	font-size: 20px;
+	transform: translate3d(272px, -23px, 0px);
+	text-align: center;
+}
+.blueactivestats{
+	position: absolute;
+	width: 577px;
+	height: 200px;
+	left: 690px;
+	top: 1012px;
+	visibility: hidden;
+}
+.blueactivetable {
+	color: white;
+	font-size: 20px;
+	height: 25px;
+}
+.blueactivegoal, .blueactiveassist, .blueactivesave, .blueactiveshot, .blueactivedemo {
+	fill:white;
+	height: 40px;
+	width: 40px;
+	padding-left: 45px;
+	font-size: 30px;
+}
+.blueactivename {
+	font-size: 30px;
+	color: white;
+	top: -61px;
+	left: 14px;
+	position: absolute;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.blueactiveboostcontainer {
+	position: absolute;
+	width: 577px;
+	height: 22px;
+	background-color: rgba(255, 255, 255, 0.5);
+	top: -27px;
+	left: 4px;
+}
+.blueactiveboost {
+	width: 577px;
+	height: 22px;
+	background: linear-gradient(0.25turn, #00c8ff, #4499FF);
+	transition: 0.2s;
+	transition-timing-function: ease;
+	}
+.blueactiveboostnumber {
+	height: 30px;
+	width: 30px;
+	color: white;
+	font-size: 20px;
+	transform: translate3d(272px, -23px, 0px);
+	text-align: center;
+}
+.activereplaybox {
+	position: absolute;
+	width: 577px;
+	height: 115px;
+	top: 945px;
+	left: 690px;
+	border-radius: 22px;
+	visibility: hidden;
+}
+.replaybox {
+	position: absolute;
+	height: 200px;
+	width: 200px;
+	color: white;
+	top: 1000px;
+	left: 695px;
+	visibility: hidden;
+}
+.replayactivename {
+	font-size: 30px;
+	color: white;
+	top: -55px;
+	left: 15px;
+	position: absolute;
+}
+.replayactivetable {
+	color: white;
+	font-size: 20px;
+	height: 25px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.replaycontainer {
+	font-size: 30px;
+	color: white;
+	top: 20px;
+	left: 20px;
+	padding-left: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.replayactivegoal, .replayactiveassist {
+	height: 50px;
+	width: 50px;
+	fill: white;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.replayactiveassist {
+	padding-left: 100px
+}
+.replayactivespeed {
+	font-size: 20px;
+	padding-left: 20px;
+	left: 440px;
+	top: -45px;
+	position: absolute;
+	width: 100px;
+	text-align: right;
+}
+.replayactivespeedicon {
+	fill: white;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: -45px;
+	left: 440px;
+}
+.bluep1boostcontainer, .bluep2boostcontainer, .bluep3boostcontainer, .bluep4boostcontainer {
+	position: absolute;
+	width: 280px;
+	height: 15px;
+	background-color: rgba(255, 255, 255, 0.5);
+	top: 37px;
+	left: 0px;
+}
+.bluep1boost, .bluep2boost, .bluep3boost, .bluep4boost {
+	width: 50%;
+	height: 15px;
+	background: linear-gradient(0.25turn, #00c8ff, #4499FF);
+	transition: 0.2s;
+	transition-timing-function: ease;
+}
+.bluep1boostnumber, .bluep2boostnumber, .bluep3boostnumber, .bluep4boostnumber {
+	height: 30px;
+	width: 30px;
+	color: white;
+	font-size: 15px;
+	transform: translate3d(125px, -16px, 0px);
+	text-align: center;
+}
+.orangep1boostcontainer, .orangep2boostcontainer, .orangep3boostcontainer, .orangep4boostcontainer {
+	position: absolute;
+	width: 280px;
+	height: 15px;
+	background-color: rgba(255, 255, 255, 0.5);
+	top: 37px;
+	left: -40px;
+	align-items: flex-end;
+	display: flex;
+	flex-direction: row-reverse;
+}
+.orangep1boost, .orangep2boost, .orangep3boost, .orangep4boost {
+	width: 50%;
+	height: 15px;
+	background: linear-gradient(0.25turn, #00c8ff, #4499FF);
+	transition: 0.2s;
+	transition-timing-function: ease;
+}
+.orangep1boostnumber, .orangep2boostnumber, .orangep3boostnumber, .orangep4boostnumber {
+	height: 30px;
+	width: 30px;
+	color: white;
+	font-size: 15px;
+	transform: translate3d(88px, 36px, 0px);
+	text-align: center;
+}
+.orangeactivespeeds, .blueactivespeeds {
+	position: absolute;
+	top: -60px;
+	left: 475px;
+	width: 90px;
+	text-align: right;
+}
+.bluebestof1, .bluebestof2, .bluebestof3, .bluebestof4, .orangebestof1, .orangebestof2, .orangebestof3, .orangebestof4 {
+	position: absolute;
+	width: 60px;
+	height: 12px;
+	background: black;
+	top: 85px;
+	left: 700px;
+	border-radius: 5px;
+	z-index: 21;
+	visibility: hidden;
+}
+.bluebestof2{
+	left: 630px;
+}
+.bluebestof3{
+	left: 560px;
+}
+.bluebestof4{
+	left: 490px;
+}
+.orangebestof1{
+	left: 1150px;
+}
+.orangebestof2{
+	left: 1220px;
+}
+.orangebestof3{
+	left: 1290px;
+}
+.orangebestof4{
+	left: 1360px;
+}
+.bestof3, .bestof5, .bestof7 {
+	font-size: 17px;
+	color: white;
+	position: absolute;
+	top: 101px;
+	left: 809px;
+	z-index: 21;
+	width: 300px;
+	text-align: center;
+	visibility: hidden;
+}
+.BestOfBackGround {
+	position: absolute;
+	width: 357px;
+	height: 18px;
+	top: 104px;
+	left: 775px;
+	background-color: rgba(252, 238, 33, 0.4);
+	z-index: 21;
+	visibility: hidden;
+}
+.bluep1statoneone, .bluep2statoneone , .bluep3statoneone , .bluep4statoneone,
+.bluep1stattwoone, .bluep2stattwoone , .bluep3stattwoone , .bluep4stattwoone,
+.bluep1statthreeone, .bluep2statthreeone , .bluep3statthreeone , .bluep4statthreeone {
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	top: -70px;
+}
+.bluep1statoneone, .bluep2statoneone , .bluep3statoneone , .bluep4statoneone {
+	left: 250px;
+}
+.bluep1stattwoone, .bluep2stattwoone , .bluep3stattwoone , .bluep4stattwoone {
+	left: 210px;
+}
+.bluep1statthreeone, .bluep2statthreeone , .bluep3statthreeone , .bluep4statthreeone {
+	left: 170px;
+}
+.bluep1statone, .bluep2statone, .bluep3statone, .bluep4statone,
+.bluep1stattwo, .bluep2stattwo, .bluep3stattwo, .bluep4stattwo,
+.bluep1statthree, .bluep2statthree, .bluep3statthree, .bluep4statthree,
+.orangep1stattwoone, .orangep2stattwoone , .orangep3stattwoone , .orangep4stattwoone,
+.orangep1statoneone, .orangep2statoneone , .orangep3statoneone , .orangep4statoneone,
+.orangep1statthreeone, .orangep2statthreeone, .orangep3statthreeone, .orangep4statthreeone {
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	top: -70px;
+	background: no-repeat;
+}
+.orangep1statoneone, .orangep2statoneone , .orangep3statoneone , .orangep4statoneone {
+	left: 10px;
+}
+.orangep1stattwoone, .orangep2stattwoone , .orangep3stattwoone , .orangep4stattwoone {
+	left: 50px;
+}
+.orangep1statthreeone, .orangep2statthreeone , .orangep3statthreeone , .orangep4statthreeone {
+	left: 90px;
+}
+.bluep1statone, .bluep2statone, .bluep3statone, .bluep4statone {
+	left: 250px;
+}
+.bluep1stattwo, .bluep2stattwo, .bluep3stattwo, .bluep4stattwo {
+	left: 210px;
+}
+.bluep1statthree, .bluep2statthree, .bluep3statthree, .bluep4statthree {
+	left: 170px;
+}
+.orangep1statone, .orangep2statone, .orangep3statone, .orangep4statone,
+.orangep1stattwo, .orangep2stattwo, .orangep3stattwo, .orangep4stattwo,
+.orangep1statthree, .orangep2statthree, .orangep3statthree, .orangep4statthree {
+	position: absolute;
+	height: 35px;
+	width: 35px;
+	top: -70px;
+	background: no-repeat;
+}
+.orangep1statone, .orangep2statone, .orangep3statone, .orangep4statone {
+	left: 10px;
+}
+.orangep1stattwo, .orangep2stattwo, .orangep3stattwo, .orangep4stattwo {
+	left: 50px;
+}
+.orangep1statthree, .orangep2statthree, .orangep3statthree, .orangep4statthree{
+	left: 90px;
+}
+.orangep1death, .orangep2death, .orangep3death, .orangep4death, .bluep1death, .bluep2death, .bluep3death, .bluep4death {
+	position: absolute;
+	width: 52px;
+	height: 52px;
+	top: -20px;
+	background-image: url(SVG/Demolition.svg) !important;
+	background: no-repeat;
+}
+.bluep1death, .bluep2death, .bluep3death, .bluep4death {
+	left: 300px;
+}
+.orangep1death, .orangep2death, .orangep3death, .orangep4death {
+	left: -60px;
+}
+.endscoreboard {
+	position: fixed;
+	width: 1920px;
+	height: 1080px;
+	background-size: cover;
+	background-image: URL(svg/endscoreboard.jpeg);
+	z-index: 20;
+	visibility: hidden;
+}
+.endscoreboardgrid {
+	position: fixed;
+	width: 1920px;
+	height: 1080px;
+	background-size: cover;
+	background-image: URL(svg/endscoreboardgrid.png);
+	z-index: 20;
+	visibility: hidden;
+}
+.bluep1ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 645px;
+	top: 135px;
+	visibility: hidden;
+}
+.bluep2ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 430px;
+	top: 135px;
+	visibility: hidden;
+}
+.bluep3ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 215px;
+	top: 135px;
+	visibility: hidden;
+}
+.bluep4ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 0px;
+	top: 135px;
+	visibility: hidden;
+}
+.orangep1ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 1050px;
+	top: 135px;
+	visibility: hidden;
+}
+.orangep2ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 1265px;
+	top: 135px;
+	visibility: hidden;
+}
+.orangep3ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 1480px;
+	top: 135px;
+	visibility: hidden;
+}
+.orangep4ES {
+	position: absolute;
+	font-size: 50px;
+	color: white;
+	height: 950px;
+	width: 218.125px;
+	z-index: 20;
+	text-align: center;
+	left: 1695px;
+	top: 135px;
+	visibility: hidden;
+}
+.bluep1nameES, .bluep2nameES, .bluep3nameES, .bluep4nameES, .orangep1nameES, .orangep2nameES, .orangep3nameES, .orangep4nameES {
+	font-size: 25px !important;
+	white-space: nowrap;
+	overflow: hidden;
+
+}
+th{
+	height: 10px;
+}
+.score, .goals, .shots, .assists, .saves, .demos {
+	position: absolute;
+	z-index: 21;
+	width: 175px;
+	height: 15px;
+	background-color: orange;
+	left: 865px;
+	border-radius: 5px;
+	visibility: hidden;
+}
+.score {
+	top: 250px;
+}
+.goals {
+	top: 390px;
+}
+.shots {
+	top: 530px;
+}
+.assists {
+	top: 675px;
+}
+.saves {
+	top: 815px;
+}
+.demos {
+	top: 950px;
+}
+.scoreblue {
+	position: absolute;
+	z-index: 21;
+	width: 50%;
+	height: 15px;
+	background-color: blue;
+	border-radius: 5px;
+}
+.goalsblue {
+	position: absolute;
+	z-index: 21;
+	width: 50%;
+	height: 15px;
+	background-color: blue;
+	border-radius: 5px;
+}
+.shotsblue {
+	position: absolute;
+	z-index: 21;
+	width: 50%;
+	height: 15px;
+	background-color: blue;
+	border-radius: 5px;
+}
+.assistsblue {
+	position: absolute;
+	z-index: 21;
+	width: 50%;
+	height: 15px;
+	background-color: blue;
+	border-radius: 5px;
+}
+.savesblue {
+	position: absolute;
+	z-index: 21;
+	width: 50%;
+	height: 15px;
+	background-color: blue;
+	border-radius: 5px;
+}
+.demosblue {
+	position: absolute;
+	z-index: 21;
+	width: 50%;
+	height: 15px;
+	background-color: blue;
+	border-radius: 5px;
+}
+.bluelogocontainer {
+	position: absolute;
+	background: rgba(30,30,30, 0.95);
+	width: 118px;
+	height: 86px;
+	top: 18px;
+	left: 310px;
+	visibility: hidden;
+	border-radius: 15px 0px 0px 15px;
+	z-index: 21;
+}
+.orangelogocontainer {
+	position: absolute;
+	background: rgba(30,30,30, 0.95);
+	width: 118px;
+	height: 86px;
+	top: 18px;
+	left: 1480px;
+	visibility: hidden;
+	border-radius: 0px 15px 15px 0px;
+	z-index: 21;
+}
+.bluelogo {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 21px;
+	top: 6px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 22;
+}
+.orangelogo {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 25px;
+	top: 6px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 22;
+}
+.bluep1scoretES{
+	position: absolute;
+	top: 73px;
+	left: 195px;
+	color: white;
+	width: 218.125px;
+	height: 30px;
+	font-size: 30px;
+	text-align: center;
+}
+.bluep1goalstES{
+	position: absolute;
+	top: 213px;
+	left: 195px;
+	color: white;
+	width: 218.125px;
+	height: 30px;
+	font-size: 30px;
+	text-align: center;
+}
+.bluep1shotstES{
+	position: absolute;
+	top: 357px;
+	left: 195px;
+	color: white;
+	width: 218.125px;
+	height: 30px;
+	font-size: 30px;
+	text-align: center;
+}
+.bluep1assiststES{
+	position: absolute;
+	top: 499px;
+	left: 195px;
+	color: white;
+	width: 218.125px;
+	height: 30px;
+	font-size: 30px;
+	text-align: center;
+}
+.bluep1savestES{
+	position: absolute;
+	top: 640px;
+	left: 195px;
+	color: white;
+	width: 218.125px;
+	height: 30px;
+	font-size: 30px;
+	text-align: center;
+}
+.bluep1demostES {
+	position: absolute;
+	top: 777px;
+	left: 195px;
+	color: white;
+	width: 218.125px;
+	height: 30px;
+	font-size: 30px;
+	text-align: center;
+}
+.blueGradient {
+	position: absolute;
+	width: 456.5px;
+	height: 86px;
+	left: 429px;
+	top: 18px;
+	background: none;
+	z-index: 21;
+}
+.orangeGradient {
+	position: absolute;
+	width: 456.5px;
+	height: 86px;
+	left: 1020px;
+	top: 18px;
+	background: none;
+	z-index: 21;
+}
+.replayactiveassists, .replayactivegoals {
+	visibility: hidden;
+}
+.offline {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	color: white;
+	text-align: center;
+	font-size: 60px;
+}
+.bluescratch {
+	position: absolute;
+	height: 88px;
+	width: 459px;
+	top: 17px;
+	left: 426px;
+	opacity: 100;
+	z-index: 21;
+	background-image: url(SVG/scratch.png);
+	background-size: contain
+}
+.orangescratch {
+	position: absolute;
+	height: 88px;
+	width: 459px;
+	top: 17px;
+	left: 1019px;
+	opacity: 100;
+	z-index: 21;
+	background-image: url(SVG/scratch.png);
+	background-size: contain
+}
+.baa {
+    fill: rgba(254, 238, 0, 0.4);
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.marquee {
+  height: 18px;
+  width: 1053px;
+  overflow: hidden;
+  position: absolute;
+  left: 426px;
+  color: white;
+  z-index: 23;
+}
+
+
+/* would need to be adjusted depending on time */
+.marquee .marqueeone{
+	color: white;
+  animation: marquee 40s linear infinite
+}
+
+.marquee .marqueetwo{
+	color: white;
+  animation: marquee 40s linear 20s infinite 
+}
+
+/* even out the elements */
+.marquee div {
+  position: absolute;
+  width: 100%;
+  left: 100%;
+  height: 18px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+a {
+	color: white;
+}
+/* add delay at the end of animation so you dont start while another div is going */
+@keyframes marquee {
+  0% { left: 100%; }
+  100% { left: -100%; }
+}
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/3909a7");
+
+  
+@font-face {font-family: 'UniversLTPro-Ex';src: url('webfonts/3909A7_0_0.eot');src: url('webfonts/3909A7_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/3909A7_0_0.woff2') format('woff2'),url('webfonts/3909A7_0_0.woff') format('woff'),url('webfonts/3909A7_0_0.ttf') format('truetype');}

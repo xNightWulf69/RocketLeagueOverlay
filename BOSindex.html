@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.socket.io/4.5.4/socket.io.min.js" integrity="sha384-/KNQL8Nu5gCHLqwqfQjA689Hhoqgi2S84SNUxC3roTe4EhJ9AfLkp8QiQcU8AMzI" crossorigin="anonymous"></script>
+  </head>
+  <script>
+    var socket = io();
+    async function blueteamnamesubmit() {
+        var input = document.getElementById('bluenametest');
+        socket.emit('blueteamname', input.value);
+        if (input.value) {
+        $(".blueteamnamesubmit").css('background', 'green')
+    } else { 
+        $(".blueteamnamesubmit").css('background', 'red')
+     }
+}
+    async function orangeteamnamesubmit() {
+    var input = document.getElementById('orangenametest');
+    socket.emit('orangeteamname', input.value);
+    if (input.value) {
+        $(".orangeteamnamesubmit").css('background', 'green')
+    } else { 
+        $(".orangeteamnamesubmit").css('background', 'red')
+     }
+}
+    async function bw1() {
+    var input = document.getElementById('buttonbw1');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('bw1', "true");
+        $('.buttonbw1').css('background-color', 'rgb(6, 136, 243)')
+    } else {
+        socket.emit('bw1', "false");
+        $('.buttonbw1').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function bw2() {
+    var input = document.getElementById('buttonbw2');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('bw2', "true");
+        $('.buttonbw2').css('background-color', 'rgb(6, 136, 243)')
+    } else {
+        socket.emit('bw2', "false");
+        $('.buttonbw2').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function bw3() {
+    var input = document.getElementById('buttonbw3');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('bw3', "true");
+        $('.buttonbw3').css('background-color', 'rgb(6, 136, 243)')
+    } else {
+        socket.emit('bw3', "false");
+        $('.buttonbw3').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function bw4() {
+    var input = document.getElementById('buttonbw4');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('bw4', "true");
+        $('.buttonbw4').css('background-color', 'rgb(6, 136, 243)')
+    } else {
+        socket.emit('bw4', "false");
+        $('.buttonbw4').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function ow1() {
+    var input = document.getElementById('buttonow1');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('ow1', "true");
+        $('.buttonow1').css('background-color', 'orange')
+    } else {
+        socket.emit('ow1', "false");
+        $('.buttonow1').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function ow2() {
+    var input = document.getElementById('buttonow2');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('ow2', "true");
+        $('.buttonow2').css('background-color', 'orange')
+    } else {
+        socket.emit('ow2', "false");
+        $('.buttonow2').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function ow3() {
+    var input = document.getElementById('buttonow3');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('ow3', "true");
+        $('.buttonow3').css('background-color', 'orange')
+    } else {
+        socket.emit('ow3', "false");
+        $('.buttonow3').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function ow4() {
+    var input = document.getElementById('buttonow4');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('ow4', "true");
+        $('.buttonow4').css('background-color', 'orange')
+    } else {
+        socket.emit('ow4', "false");
+        $('.buttonow4').css('background-color', 'rgb(255, 255, 255)')
+    }
+}
+async function bestof3() {
+    var input = document.getElementById('buttonbestof3');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('BestOfThree', "true");
+        $('.buttonbestof3').css('background', 'green')
+        $('.buttonbestof5').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbestof7').css('background', 'rgb(255, 255, 255)')
+        $('.buttonnobestof').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbw1, .buttonbw2').css("display", "inline-block")
+        $('.buttonow1, .buttonow2').css("display", "inline-block")
+        $('.buttonbw4, .buttonow4, .buttonbw3, .buttonow3').css("display", "none")
+    } else {
+        socket.emit('BestOfThree', "false");
+        $('.buttonbestof3').css('background', 'rgb(255, 255, 255)')
+    }
+}
+async function bestof5() {
+    var input = document.getElementById('buttonbestof5');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('BestOffive', "true");
+        $('.buttonbestof5').css('background', 'green')
+        $('.buttonbestof3').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbestof7').css('background', 'rgb(255, 255, 255)')
+        $('.buttonnobestof').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbw1, .buttonbw2, .buttonbw3').css("display", "inline-block")
+        $('.buttonow1, .buttonow2, .buttonow3').css("display", "inline-block")
+        $('.buttonbw4, .buttonow4').css("display", "none")
+    } else {
+        socket.emit('BestOffive', "false");
+        $('.buttonbestof5').css('background', 'rgb(255, 255, 255)')
+    }
+}
+async function bestof7() {
+    var input = document.getElementById('buttonbestof7');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('BestOfseven', "true");
+        $('.buttonbestof7').css('background', 'green')
+        $('.buttonbestof3').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbestof5').css('background', 'rgb(255, 255, 255)')
+        $('.buttonnobestof').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbw1, .buttonbw2, .buttonbw3, .buttonbw4').css("display", "inline-block")
+        $('.buttonow1, .buttonow2, .buttonow3, .buttonow4').css("display", "inline-block")
+    } else {
+        socket.emit('BestOfseven', "false");
+        $('.buttonbestof7').css('background', 'rgb(255, 255, 255)')
+    }
+}
+async function nobestof() {
+    var input = document.getElementById('buttonnobestof');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 255, 255)') {
+        socket.emit('BestOfnone', "true");
+        $('.buttonnobestof').css('background', 'green')
+        $('.buttonbestof3').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbestof5').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbestof7').css('background', 'rgb(255, 255, 255)')
+        $('.buttonbw1, .buttonbw2, .buttonbw3, .buttonbw4').css("display", "none")
+        $('.buttonow1, .buttonow2, .buttonow3, .buttonow4').css("display", "none")
+    } else {
+        socket.emit('BestOfnone', "false");
+        $('.buttonnobestof').css('background', 'rgb(255, 255, 255)')
+    }
+}
+async function TournamentTextSubmit() {
+    var input = document.getElementById('TournamentTextInput');
+    var data = input.value
+    socket.emit('TournamentText', data);
+    if (input.value) {
+        $('.TournamentTextSubmit').css('background', 'green')
+    } else {
+        $('.TournamentTextSubmit').css('background', 'red')
+    }
+}
+async function uselogo() {
+    var input = document.getElementById('uselogo');
+    const cssObj = window.getComputedStyle(input, null);
+    let bgColor = cssObj.getPropertyValue("background-color");
+    if (bgColor === 'rgb(255, 0, 0)') {
+        socket.emit('uselogo', "true");
+        $('.uselogo').css('background-color', 'green')
+    } else {
+        socket.emit('uselogo', "false");
+        $('.uselogo').css('background-color', 'rgb(255, 0, 0)')
+    }
+}
+async function orangecolorsubmit() {
+   var input = document.getElementById('orangeprimary');
+   var secondaryinput = document.getElementById('orangesecondary');
+   socket.emit('orangeprimary', input.value);
+   socket.emit('orangesecondary', secondaryinput.value);
+   $('.orangecoloursubmit').css('background-color', 'green')
+   $('.orangecoloursubmitclear').css('background-color', 'white')
+}
+async function bluecolorsubmit() {
+   var input = document.getElementById('blueprimary');
+   var secondaryinput = document.getElementById('bluesecondary');
+   socket.emit('blueprimary', input.value);
+   socket.emit('bluesecondary', secondaryinput.value);
+   $('.bluecoloursubmit').css('background-color', 'green')
+   $('.bluecoloursubmitclear').css('background-color', 'white')
+   
+}
+async function orangecolorsubmitclear() {
+   $('.orangecoloursubmitclear').css('background-color', 'green')
+   $('.orangecoloursubmit').css('background-color', 'red')
+   socket.emit('orangeprimary', "#FF7B00");
+   socket.emit('orangesecondary', "#FF9500");
+}
+async function bluecolorsubmitclear() {
+   $('.bluecoloursubmitclear').css('background-color', 'green')
+   $('.bluecoloursubmit').css('background-color', 'red')
+   socket.emit('blueprimary', "#0091FF");
+   socket.emit('bluesecondary', "#00B3FF");
+}
+async function reset() {
+    localStorage.clear();
+    document.querySelector('.bluenametest').value = ''
+    document.querySelector('.orangenametest').value = ''
+    $(".blueteamnamesubmit").css('background', 'red')
+    $(".orangeteamnamesubmit").css('background', 'red')
+   const classes = ['.buttonbw1', '.buttonbw2', '.buttonbw3', '.buttonbw4', '.buttonow1', '.buttonow2', '.buttonow3', '.buttonow4', '.buttonow4','.buttonow4', '.buttonnobestof', '.buttonbestof3', '.buttonbestof5', '.buttonbestof7']
+    for (let i of classes) {
+        $(i).css('background', 'white')}
+        $(".blueteamnamesubmit").css('background', 'red')
+        $(".TournamentTextSubmit").css('background', 'red')
+        $(".orangeteamnamesubmit").css('background', 'red')
+        $(".bluecoloursubmit").css('background', 'red')
+        $(".orangecoloursubmit").css('background', 'red')
+        $(".uselogo").css('background', 'red')
+        $(".blueprimary").css('background', 'white')
+        $(".orangeprimary").css('background', 'white')
+        $(".bluesecondary").css('background', 'white')
+        $(".orangesecondary").css('background', 'white')
+        document.querySelector('.TournamentTextInput').value = ''
+        document.querySelector('.blueprimary').value = '#0091FF'
+        document.querySelector('.bluesecondary').value = '#06D4F9'
+        document.querySelector('.orangeprimary').value = '#FF7B00'
+        document.querySelector('.orangesecondary').value = '#FFAE00'
+        socket.emit('reset', "true");
+    }
+    function uploadFile() {
+  const fileInput = document.getElementById('fileInput');
+  const file = fileInput.files[0];
+  socket.emit('upload-file', { name: file.name, data: file });
+}
+  async function scoreboardColourSubmit() {
+    var input = document.getElementById('scoreboardColour');
+    var opacity = $("input[type=range]").val();
+    var color = input.value;
+    var rgbaCol = 'rgba(' + parseInt(color.slice(-6, -4), 16) + ',' + parseInt(color.slice(-4, -2), 16) + ',' + parseInt(color.slice(-2), 16) + ',' + opacity + ')';
+    socket.emit('scoreboardColour', rgbaCol);
+    $('.scoreboardColourSubmit').css('background-color', rgbaCol)
+
+}
+  </script>
+<body>
+    <div class="mainInfo">
+        <div class="tournamentContainer">
+            <label for="TournamentTextInput">Tournament Text:</label>
+            <input class="TournamentTextInput" id="TournamentTextInput" type="text" name="TournamentText"></input>
+            <button class="TournamentTextSubmit" onclick="TournamentTextSubmit()">Submit</button>
+        </div>
+        <div class="useLogoContainer">
+            <label for="uselogo">Use Logo's:</label>
+            <button class="uselogo" id="uselogo" onclick="uselogo()">Use Logo's</button>
+        </div>
+        <label for="uselogo">Scoreboard Colours:</label>
+        <input class="scoreboardColour" id="scoreboardColour" type="color" value="#FF7B00"/>
+        <label id="Opacity" for="uselogo">Opacity:</label>
+        <input type="range" min="0" max="1" step="0.1">
+        <button class="scoreboardColourSubmit" onclick="scoreboardColourSubmit()">Submit</button><br>
+        <div class="imageInfo">Upload new logo's: Make sure the file name is the team name but without spaces!!!</div>
+        <input id="fileInput" type="file" accept="image/png">
+        <button id="uploadButton" onclick="uploadFile()">Upload</button>
+        <label for="buttonnobestof">Best Of Series:</label>
+            <button class="buttonnobestof" id="buttonnobestof" onclick="nobestof()">No Best Of</button>
+            <button class="buttonbestof3" id="buttonbestof3" onclick="bestof3()">Best Of 3</button>
+            <button class="buttonbestof5" id="buttonbestof5" onclick="bestof5()">Best Of 5</button>
+            <button class="buttonbestof7" id="buttonbestof7" onclick="bestof7()">Best Of 7</button><br>
+            <button class="buttonbw1" id="buttonbw1" onclick="bw1()">Blue Win 1</button>
+            <button class="buttonbw2" id="buttonbw2" onclick="bw2()">Blue Win 2</button>
+            <button class="buttonbw3" id="buttonbw3" onclick="bw3()">Blue Win 3</button>
+            <button class="buttonbw4" id="buttonbw4" onclick="bw4()">Blue Win 4</button><br>
+            <button class="buttonow1" id="buttonow1" onclick="ow1()">Orange Win 1</button>
+            <button class="buttonow2" id="buttonow2" onclick="ow2()">Orange Win 2</button>
+            <button class="buttonow3" id="buttonow3" onclick="ow3()">Orange Win 3</button>
+            <button class="buttonow4" id="buttonow4" onclick="ow4()">Orange Win 4</button><br>
+    </div>
+    <div class="blueTeam">
+        <div class="blueWinText">Blue Team</div>
+        <label for="bluenametest">Name:</label>
+        <input class="bluenametest" id="bluenametest" type="text" name="fname">
+        <button class="blueteamnamesubmit" onclick="blueteamnamesubmit()">Submit</button><br>
+        <label for="blueprimary">Blue Primary Colour:</label>
+        <input class="blueprimary" id="blueprimary" type="color" value="#0091FF"/><br>
+        <label for="bluesecondary">Blue Secondary Colour:</label>
+        <input class="bluesecondary" id="bluesecondary" type="color" value="#06D4F9"/>
+        <button class="bluecoloursubmit" onclick="bluecolorsubmit()">Submit</button>
+        <button class="bluecoloursubmitclear" onclick="bluecolorsubmitclear()">Clear</button><br>
+    </div>
+    <div class="orangeTeam">
+        <div class="orangeWinText">Orange Team</div>
+        <label for="blueprimary">Orange Team Name:</label>
+        <input class="orangenametest" id="orangenametest" type="text" name="fname">
+        <button class="orangeteamnamesubmit" onclick="orangeteamnamesubmit()">Submit</button><br>
+        <label for="orangeprimary">Orange Primary Colour:</label>
+        <input class="orangeprimary" id="orangeprimary" type="color" value="#FF7B00"/><br>
+        <label for="orangesecondary">Orange Secondary Colour:</label>
+        <input class="orangesecondary" id="orangesecondary" type="color" value="#FFAE00"/>
+        <button class="orangecoloursubmit" onclick="orangecolorsubmit()">Submit</button>
+        <button class="orangecoloursubmitclear" onclick="orangecolorsubmitclear()">Clear</button><br>
+    </div>
+    <div class="BestOfReset">
+        <label for="buttonreset">Reset:</label>
+        <button class="buttonreset" onclick="reset()">Reset</button>
+    </div>
+    
+    </body>
+    </html>
+    <style>
+    @font-face {
+        font-family: Roboto-Bold;
+        src: url(https://fonts.gstatic.com/s/roboto/v27/KFOlCnqEu92Fr1MmWUlfBBc4AMP6lQ.woff2);
+    }
+    input, label, button {
+        display:block;
+    }
+    body {
+        background-color:#161a22;
+        font-family: Roboto-Bold;
+    }
+    button {
+        display:inline-block;
+        height: 21px;
+        background-color: white;
+        border-radius: 5px;
+        height: 30px;
+        width: 100px;
+    }
+    #fileInput {
+        color: white;
+    }
+    .TournamentTextSubmit{
+        position: absolute;
+        top: 36px;
+        left: 623px;
+        background-color: red;
+    }
+    .uselogo {
+        background-color: red;
+    }
+    .tournamentContainer, .useLogoContainer {
+        padding: 10px;
+        padding-left: 0px;
+    }
+    .buttonbestof3, .buttonbestof5, .buttonbestof7 {
+        margin-left: 10px;
+    }
+    .buttonbw2, .buttonbw3, .buttonbw4, .buttonow2, .buttonow3, .buttonow4, .bluecoloursubmitclear, .orangecoloursubmitclear {
+        margin-left: 10px;
+    }
+    .bluecoloursubmit {
+        background-color: red;
+    }
+    .orangecoloursubmit {
+        background-color: red;
+    }
+    .mainInfo {
+        position: absolute;
+        background-color: #161a22;
+        border: 5px solid #2e2e2e;
+        width: 705px;
+        padding: 10px;
+    }
+    input[type="text"] {
+        width: 600px;
+    }
+    label {
+        color: white;
+        width: 180px;
+    }
+    .blueTeam {
+        position: absolute;
+        background-color: #161a22;
+        border: 5px solid #0d3076;
+        padding: 10px;
+        top: 433px;
+        left: 8px;
+        width: 705px;
+    }
+    .blueteamnamesubmit {
+        position: absolute;
+        top: 65px;
+        left: 622px;
+        background-color: red;
+    }
+    .orangeteamnamesubmit {
+        position: absolute;
+        top: 65px;
+        left: 622px;
+        background-color: red;
+    }
+    .blueWinText {
+        color: white;
+        padding-bottom: 10px;
+        font-size: 25px;
+    }
+    .orangeTeam {
+        position: absolute;
+        background-color: #161a22;
+        border: 5px solid #76530d;
+        padding: 10px;
+        top: 715px;
+        left: 8px;
+        width: 705px;
+    }
+    .orangeWinText {
+        color: white;
+        padding-bottom: 10px;
+        font-size: 25px;
+    }
+    .imageInfo {
+        color: white;
+        padding-bottom: 10px;
+        font-size: 15px;
+    }
+    .bluesecondary, .orangesecondary {
+        margin-bottom: 10px;
+    }
+    .BestOfReset {
+        position: absolute;
+        background-color: #161a22;
+        border: 5px solid #760d0d;
+        padding: 10px;
+        top: 1016px;
+        left: 8px;
+        width: 705px;
+    }
+    .blueprimary, .bluesecondary, .orangeprimary, .orangesecondary {
+        background-color: white;
+        border-radius: 5px;
+    }
+    input[type="color" i] {
+        cursor: pointer;
+    }
+    button {
+        cursor: pointer;
+        border: 2px solid black;
+        box-shadow: 0px 0px 0px 2px#0000007b;
+    }
+    button:active {
+        background-color:rgb(209, 209, 209);
+        box-shadow: 0px 0px 0px 2px#9a9a9aa5;
+    }
+    .buttonbw1, .buttonbw2, .buttonbw3, .buttonbw4, .buttonow1, .buttonow2, .buttonow3, .buttonow4 {
+        display: none;
+    }
+    button {
+        font-family: Roboto-Bold;
+        font-size: 13px;
+    }
+    input[type="range" i] {
+        position: absolute;
+        top: 172px;
+        left: 68px;
+    }
+    #Opacity {
+        position: absolute;
+        top: 157px;
+        left: 69px;
+    }
+    </style>
